@@ -70,7 +70,9 @@ while True:
         
         if (df["Fast Ema"][len(df.index)-3] < df["Slow Ema"][len(df.index)-3] and df["Fast Ema"][len(df.index)-2] > df["Slow Ema"][len(df.index)-2]) or (df["Fast Ema"][len(df.index)-3] > df["Slow Ema"][len(df.index)-3] and df["Fast Ema"][len(df.index)-2] < df["Slow Ema"][len(df.index)-2]):
             kesisim = True
-        
+        else: 
+            kesisim = False
+            
         # LONG ENTER
         def longEnter(alinacak_miktar):
             order = exchange.create_market_buy_order(symbol, alinacak_miktar)
