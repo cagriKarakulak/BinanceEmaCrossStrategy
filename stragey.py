@@ -45,13 +45,15 @@ while True:
         if not position_bilgi.empty and position_bilgi["positionAmt"][len(position_bilgi.index) - 1] != 0:
             pozisyondami = True
         else: pozisyondami = False
+            shortPozisyonda = False
+            longPozisyonda = False
         
         # Long pozisyonda mı?
-        if not position_bilgi.empty and float(position_bilgi["positionAmt"][len(position_bilgi.index) - 1]) > 0:
+        if pozisyondami and float(position_bilgi["positionAmt"][len(position_bilgi.index) - 1]) > 0:
             longPozisyonda = True
             shortPozisyonda = False
         # Short pozisyonda mı?
-        if not position_bilgi.empty and float(position_bilgi["positionAmt"][len(position_bilgi.index) - 1]) < 0:
+        if pozisyondamiand float(position_bilgi["positionAmt"][len(position_bilgi.index) - 1]) < 0:
             shortPozisyonda = True
             longPozisyonda = False
         
