@@ -44,7 +44,8 @@ while True:
         #Pozisyonda olup olmadığını kontrol etme
         if not position_bilgi.empty and position_bilgi["positionAmt"][len(position_bilgi.index) - 1] != 0:
             pozisyondami = True
-        else: pozisyondami = False
+        else: 
+            pozisyondami = False
             shortPozisyonda = False
             longPozisyonda = False
         
