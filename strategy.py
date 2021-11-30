@@ -54,7 +54,7 @@ while True:
             longPozisyonda = True
             shortPozisyonda = False
         # Short pozisyonda mı?
-        if pozisyondamiand float(position_bilgi["positionAmt"][len(position_bilgi.index) - 1]) < 0:
+        if pozisyondami and float(position_bilgi["positionAmt"][len(position_bilgi.index) - 1]) < 0:
             shortPozisyonda = True
             longPozisyonda = False
         
